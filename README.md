@@ -10,7 +10,7 @@
 
 Тесты лабораторных: https://drive.google.com/folderview?id=1Vrftg5hXXg_FdMLT5bFFnyxJeDeN4qpT
 
-Списки групп: 
+Списки групп: https://docs.google.com/spreadsheets/d/16U_tBphyLUSa3Zxx0ktv-bqFX_7qJjb2mWJL6Cub6YQ/edit?usp=sharing
 
 
 
