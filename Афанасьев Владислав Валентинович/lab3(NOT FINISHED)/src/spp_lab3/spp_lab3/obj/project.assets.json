@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\spp_lab3\\task1.csproj",
+      "projectUniqueName": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\spp_lab3\\task1.csproj",
       "projectName": "task1",
-      "projectPath": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\spp_lab3\\task1.csproj",
+      "projectPath": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\spp_lab3\\task1.csproj",
       "packagesPath": "C:\\Users\\Nord\\.nuget\\packages\\",
-      "outputPath": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\spp_lab3\\obj\\",
+      "outputPath": "F:\\Сдать\\СПП\\spp_po_2020\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\spp_lab3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Microsoft\\Xamarin\\NuGet\\"
