@@ -1,0 +1,13 @@
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.exe
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.deps.json
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.runtimeconfig.json
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.runtimeconfig.dev.json
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.dll
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\bin\Release\netcoreapp3.1\Task2.pdb
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.csprojAssemblyReference.cache
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.csproj.CoreCompileInputs.cache
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.AssemblyInfoInputs.cache
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.AssemblyInfo.cs
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.dll
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.pdb
+F:\Сдать\СПП\spp_po_2020\Афанасьев Владислав Валентинович\lab2\src\spp_lab2\Task2\obj\Release\netcoreapp3.1\Task2.genruntimeconfig.cache
