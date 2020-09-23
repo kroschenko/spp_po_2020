@@ -60,27 +60,29 @@ public class Main {
             }
         }
 
-        int n = Arrays.stream(arr).max().getAsInt();
-        int count = 1;
-        while(n/10 !=0) {
-            n /= 10;
-            count ++;
+        int shift1 = -arr[0];
+        int[] newArr = new int[arr.length-1];
+
+        for(int i=1;i<arr.length;i++){
+            newArr[i-1] = arr[i];
         }
-        int[] array = new int[count];
-        count = 0;
-        for (int i=0; i<array.length; i++) {
-            array[i] = 0;
+
+        for (int i = 0; i< newArr.length; i++) {
+            System.out.print(" "+newArr[i]);
         }
-        for(int j : arr) {
-            count = 1;
-            while(j/10 != 0) {
-                j /= 10;
-                count ++;
+        for (int i = 0; i > shift1; i--) {
+            int buffer = newArr[newArr.length - 1];
+            newArr[newArr.length - 1] = newArr[0];
+            for (int j = 1; j < newArr.length - 1; j++) {
+                newArr[j - 1] = newArr[j];
             }
-            array[count-1] += 1;
+            newArr[newArr.length - 2] = buffer;
         }
-        for (int i=0; i<array.length; i++) {
-            System.out.println(array[i]+"----"+(i+1)+" numbers");
+
+    System.out.println();
+
+        for (int i = 0; i< newArr.length; i++) {
+            System.out.print(" "+newArr[i]);
         }
 
         //Task 1
