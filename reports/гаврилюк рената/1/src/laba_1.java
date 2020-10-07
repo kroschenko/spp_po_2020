@@ -45,10 +45,64 @@ class Lab_1 {
         return abbreviate;
     }
 
+    public int hash(String str){
+        int hash = 7;
+        for (int i = 0; i < str.length(); i++) {
+            hash = hash * 31 + str.toCharArray()[i];
+        }
+        return hash;
+    }
+
+    public int[] sort(int[] set){
+        for (int i = 0; i < set.length; ++i){	        
+            for (int j = 0; j < set.length - 1; ++j){
+                if (set[j] > set[j + 1]){
+                    int temp = set[j];
+                    set[j] = set[j + 1];
+                    set[j + 1] = temp;
+                }
+            }
+            
+        }
+        return set;
+    }
+    public String[] deleteElement(String[] arr, String el){
+        String[] newSet = new String[arr.length - 1];
+        for(int i = 0, j = 0; i < arr.length; ++i, ++j){
+            if(arr[i]!=null){
+            if(arr[i].equals(el)){
+                ++i;
+            }
+            if(arr.length - 1 == i){
+                
+            }else{
+                
+            newSet[j] = arr[i];}}
+        }
+        arr = newSet;
+        return arr;
+    }
     public static void main(String[] args) { 
         Lab_1 contr = new Lab_1();
         
-        System.out.println("Task 1");    
+        System.out.println("Task 1");
+        Random rand = new Random();
+       // int hashArr[]
+        int N = args.length;
+            for(int i = 0; i < N; i++) {
+                String el = args[rand.nextInt(args.length)];
+                System.out.println(el);
+                args = contr.deleteElement(args, el);
+                                //System.out.println(contr.hash(args[i]));
+               // System.out.println((args[i]));
+            }
+        //}
+
+        /*
+
+        System.out.println(); 
+        System.out.println(); 
+        
         Scanner in = new Scanner(System.in);
         System.out.print("Enter number : ");
         contr.randomOutput(in.nextInt());
@@ -78,5 +132,5 @@ class Lab_1 {
         System.out.println(contr.abbreviate(in.nextLine()));
         
         in.close();
-    }
+    */ }
 }
