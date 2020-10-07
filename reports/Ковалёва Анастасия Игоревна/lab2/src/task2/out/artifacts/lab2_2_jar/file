@@ -1,0 +1,19 @@
+You just finished an app. It works fine, but the interface lacks style and grace.
+You could give it a makeover by drawing several sizes of custom control images
+in Photoshop and hope Apple doesn’t release a @4x retina screen. That plan, however,
+lacks strategy and sounds time-consuming. Alternatively, you could use Core Graphics
+to create an image that scales crisply for any device size.
+Core Graphics is Apple’s vector drawing framework. It’s a big, powerful application
+programming interface (API) with many tools to master and cool features like
+@IBDesignable and @IBInspectable. But never fear! This three-part series takes
+a modern approach to Core Graphics. It starts slow and eases you in with fun,
+engaging exercises. By the end, you’ll be able to create stunning graphics for your apps.
+So sit back and relax with your favorite beverage. It’s time to learn Core Graphics!
+Getting Into the Flo
+Imagine a doctor recommends you drink eight glasses of water a day. No problem, you think.
+But after a few days, you realize how easy it is to lose track. Did you down three glasses
+this afternoon or two? Did you have your water bottle at your desk yesterday or the day before?
+In this tutorial, you’ll create an app to track your drinking habits. With it, every time
+you polish off a refreshing glass of H2O, you tap a counter button. As data accumulate,
+the app will create a graph displaying your weekly consumption.
+This app will be named Flo, and here it is in its completed glory
