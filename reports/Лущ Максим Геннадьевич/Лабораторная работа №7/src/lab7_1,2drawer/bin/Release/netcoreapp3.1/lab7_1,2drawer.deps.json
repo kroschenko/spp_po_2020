@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "lab7_1,2drawer/1.0.0": {
+        "runtime": {
+          "lab7_1,2drawer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "lab7_1,2drawer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
