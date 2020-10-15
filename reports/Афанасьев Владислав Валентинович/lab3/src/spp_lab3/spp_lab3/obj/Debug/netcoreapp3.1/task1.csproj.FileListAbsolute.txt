@@ -37,3 +37,16 @@ F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав �
 F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3(NOT FINISHED)\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.dll
 F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3(NOT FINISHED)\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.pdb
 F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3(NOT FINISHED)\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.genruntimeconfig.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.exe
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.deps.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.runtimeconfig.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.runtimeconfig.dev.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.dll
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\bin\Debug\netcoreapp3.1\task1.pdb
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.csprojAssemblyReference.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.AssemblyInfoInputs.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.AssemblyInfo.cs
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.csproj.CoreCompileInputs.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.dll
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.pdb
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab3\src\spp_lab3\spp_lab3\obj\Debug\netcoreapp3.1\task1.genruntimeconfig.cache

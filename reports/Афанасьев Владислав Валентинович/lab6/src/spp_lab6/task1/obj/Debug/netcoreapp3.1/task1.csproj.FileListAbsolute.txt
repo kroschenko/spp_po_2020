@@ -1,0 +1,13 @@
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.exe
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.deps.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.runtimeconfig.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.runtimeconfig.dev.json
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.dll
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\bin\Debug\netcoreapp3.1\task1.pdb
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.csprojAssemblyReference.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.AssemblyInfoInputs.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.AssemblyInfo.cs
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.csproj.CoreCompileInputs.cache
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.dll
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.pdb
+F:\Сдать\СПП\spp_po_2020\reports\Афанасьев Владислав Валентинович\lab6\src\spp_lab6\task1\obj\Debug\netcoreapp3.1\task1.genruntimeconfig.cache

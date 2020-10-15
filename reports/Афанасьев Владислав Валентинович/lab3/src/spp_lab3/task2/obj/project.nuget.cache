@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BZBnP9zsrNAqcPPc4lj8dp5WHu+4VfpyEdW5NKbY5rF1USTRQKwLoMQgkE3Ltnb7erHIyeeAda/FoQv4QAU5Kw==",
+  "dgSpecHash": "8rNtR3nCSQc9WtSDl1YQIe+r5qrJZwmEM2Ka3gyKEM2AzklwLlYTd73W6ELiIlWyJ/vfUgInjPvPsIsWHKed5g==",
   "success": true,
-  "projectFilePath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\task2\\task2.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\task2\\task2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nord\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Nord\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
