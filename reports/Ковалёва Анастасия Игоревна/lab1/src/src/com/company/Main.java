@@ -31,13 +31,18 @@ public class Main {
     }
 
     public static double[] subarray(double[] array, int startIndex, int endIndex) {
-        double[] newArr = new double[endIndex - startIndex + 1];
-        int k = 0;
-        for (int i = startIndex; i <= endIndex; i++) {
-            newArr[k] += array[i];
-            k++;
+        if (endIndex > startIndex && endIndex <= array.length) {
+                double[] newArr = new double[endIndex - startIndex + 1];
+                int k = 0;
+                for (int i = startIndex; i <= endIndex; i++) {
+                    newArr[k] += array[i];
+                    k++;
+                }
+                return newArr;
+        } else {
+            System.out.print("Invalid index");
+            return new double[0];
         }
-        return newArr;
     }
 
     public static String shiftRight(String str, int shift) {
