@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\task2\\task2.csproj",
+      "projectUniqueName": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\task2\\task2.csproj",
       "projectName": "task2",
-      "projectPath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\task2\\task2.csproj",
+      "projectPath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\task2\\task2.csproj",
       "packagesPath": "C:\\Users\\Nord\\.nuget\\packages\\",
-      "outputPath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3(NOT FINISHED)\\src\\spp_lab3\\task2\\obj\\",
+      "outputPath": "F:\\Сдать\\СПП\\spp_po_2020\\reports\\Афанасьев Владислав Валентинович\\lab3\\src\\spp_lab3\\task2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Microsoft\\Xamarin\\NuGet\\"
@@ -58,12 +58,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
