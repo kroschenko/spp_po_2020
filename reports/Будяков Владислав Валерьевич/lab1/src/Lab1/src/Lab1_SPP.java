@@ -9,7 +9,7 @@ public class Lab1_SPP
 		Moda(1,0,4,9,5,6,7,3);
 		
 		double arr[] = {1,2,3,4,5,6,7};
-		arr = shiftRight(arr, 5);
+		arr = shiftRight(arr, 3);
 		for (int i = 0; i < arr.length; i++) 
 			System.out.println(arr[i]);
 		System.out.println(pangramEng("abcdefghijklmnoprstuvwxyz"));
@@ -54,7 +54,7 @@ public class Lab1_SPP
 		        arr[i] = temp;   // вставл€ем в текущую €чейку предыдущий
 		        temp = arr[j]; // запоминаем текущий элемент, чтоб использовать в следующей итерации цикла
 		    }
-		     arr[j] = 0;
+		     arr[j] = arr.length-shift+j+1;
 		}
 		return arr;
 	}

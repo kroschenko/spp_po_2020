@@ -1,0 +1,15 @@
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.exe
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.deps.json
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.runtimeconfig.json
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.runtimeconfig.dev.json
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.dll
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\bin\Release\netcoreapp3.1\lab7_1,2drawer.pdb
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.csprojAssemblyReference.cache
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1_2drawer.Form1.resources
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.csproj.GenerateResource.cache
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.AssemblyInfoInputs.cache
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.AssemblyInfo.cs
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.csproj.CoreCompileInputs.cache
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.dll
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.pdb
+E:\C#\NetCoreConsoleApp\lab7_1,2drawer\obj\Release\netcoreapp3.1\lab7_1,2drawer.genruntimeconfig.cache
