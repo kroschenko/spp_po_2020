@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         task1(args);
-        task2(5);
+        single(5);
         task3("danik pryanik");
     }
 
@@ -25,31 +25,23 @@ public class Main {
         System.out.println(result + "\n");
     }
 
-    public static void task2(Integer size) {
+    public static double[][] single(int size){
         System.out.println("Task2");
-        for (int i = 0; i < size; i++) {
+        double[][] arr = new double[size][size];
+        for(int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.print(single(size)[i][j] + " ");
+                if (i == j) arr[i][j] = 1;
+                else arr[i][j] = 0;
+                System.out.print(arr[i][j] + " ");
             }
-            System.out.print("\n");
+            System.out.println();
         }
-        System.out.print("\n");
+        return arr;
     }
 
     public static void task3(String str) {
         System.out.println("Task3");
         System.out.print(capitalize(str) + "\n");
-    }
-
-
-    public static double[][] single(int size) {
-        double[][] matrix = new double[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                matrix[i][j] = 1;
-            }
-        }
-        return matrix;
     }
 
     public static String capitalize(String str) {
