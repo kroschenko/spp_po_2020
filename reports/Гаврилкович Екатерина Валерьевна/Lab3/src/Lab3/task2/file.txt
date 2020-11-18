@@ -1,0 +1,32 @@
+Gogol N.V.
+Dead Souls
+1842
+9
+300
+Ignatyk E.S.
+24 05 2019
+true
+Bulgakov M.V.
+Master and Margarita
+1967
+11
+400
+Sergeev P.A.
+23 06 2000
+false
+Jerom D.S.
+over abyss in the rye
+1951
+5
+200
+Veremeyk E.S.
+11 03 2017
+true
+Tolstoy L.N.
+Anna Karenina
+1877
+7
+367
+Petrov I.I.
+02 02 2018
+false
