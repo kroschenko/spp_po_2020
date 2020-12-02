@@ -1,3 +1,0 @@
-12@Notebook@123c4fd@Apple Inc@2499@2050-01-01@30
-69@Banana@990qwef4@BananaSlaves Inc@12@2016-01-01@3000
-69@Banana@990qwef4@BananaWorld@15@2016-01-01@3000
