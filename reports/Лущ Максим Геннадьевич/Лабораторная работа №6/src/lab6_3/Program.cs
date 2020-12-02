@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,10 +8,7 @@ namespace lab6_3
     class Program
     {
         static void Main(string[] args)
-        {
-            IDisplayer displayer = new ConsoleRandomDisplayer();
-
-
+        {            
             ExplorerComponent folder1 = new Directory("Folder1");
             ExplorerComponent folder2 = new Directory("folder2");
             ExplorerComponent folder3 = new Directory("folder3");
@@ -19,6 +17,7 @@ namespace lab6_3
             ExplorerComponent exe = new File("pe", DateTime.Now + TimeSpan.FromTicks(TimeSpan.TicksPerDay * 2), 4356, "exe");
             ExplorerComponent png = new File("photo", DateTime.Now, 1000, "png");
 
+
             folder1.Add(folder2);
             folder1.Add(text);
             folder1.Add(exe);
@@ -26,17 +25,22 @@ namespace lab6_3
             folder2.Add(folder3);
             folder2.Add(png);
 
-            folder1.Display(displayer);
+            Iterator<ExplorerComponent> displayer = folder1.GetIterator();
+
+
+            while (!displayer.IsDone())
+            {
+                Console.WriteLine(displayer.Next().GetInfo());
+            }
         }
     }
 
-    abstract class ExplorerComponent: IDisplayable
+    abstract class ExplorerComponent
     {
+        public abstract Iterator<ExplorerComponent> GetIterator();       
         public virtual void Add(ExplorerComponent component) { }
         public virtual void Remove(ExplorerComponent component) { }
         public virtual string GetInfo() { return string.Empty; }
-
-        public abstract void Display(IDisplayer directory);
     }
 
     class Directory : ExplorerComponent
@@ -54,9 +58,9 @@ namespace lab6_3
         public override void Remove(ExplorerComponent component) => _items.Remove(component);
         public override string GetInfo() => Name;
 
-        public override void Display(IDisplayer directory)
+        public override Iterator<ExplorerComponent> GetIterator()
         {
-            directory.DisplayItem(this);
+            return new RandomIterator(this);
         }
     }
 
@@ -78,48 +82,79 @@ namespace lab6_3
 
         public override string GetInfo() => $"{Name} - {Extension} - {CreationDate} - {Size}";
 
-        public override void Display(IDisplayer directory)
+        public override Iterator<ExplorerComponent> GetIterator()
         {
-            directory.DisplayItem(this);
+            return null;
         }
     }
 
-    interface IDisplayable
+    abstract class Iterator<T>
     {
-        void Display(IDisplayer directory);
+        public abstract T Next();
+        public abstract bool IsDone();
+        public abstract T CurrentItem { get; }
     }
 
-    interface IDisplayer
+    class RandomIterator : Iterator<ExplorerComponent>
     {
-        void DisplayItem(Directory directory);
-        void DisplayItem(File directory);
-    }
+        private readonly ExplorerComponent _iterable;
+        private ExplorerComponent _current;
+        private Directory _currentDirectory;
+        private Iterator<ExplorerComponent> _directoryIterator;
+        private int[] _indexes;
+        private int _currentIndex;
 
-    class ConsoleRandomDisplayer : IDisplayer
-    {
-        public void DisplayItem(Directory directory)
+        public RandomIterator(ExplorerComponent explorerComponent)
         {
-            int[] indexes = new int[directory.Items.Count];
-            for (int i = 0; i < directory.Items.Count; i++)
+            _iterable = explorerComponent;
+            _currentDirectory = _iterable as Directory;
+
+            _indexes = new int[_currentDirectory.Items.Count];
+            for (int i = 0; i < _currentDirectory.Items.Count; i++)
             {
-                indexes[i] = i;
+                _indexes[i] = i;
             }
 
             Random random = new Random(DateTime.Now.Millisecond);
-            indexes = indexes.OrderBy(x => random.Next()).ToArray();
+            _indexes = _indexes.OrderBy(x => random.Next()).ToArray();
 
-
-            Console.WriteLine(directory.GetInfo());
-            foreach (int index in indexes)
-            {
-                 directory.Items.ElementAt(index).Display(this);
-            }
+            _currentIndex = 0;
         }
+        public override ExplorerComponent CurrentItem { get => _current; }
+           
 
-        public void DisplayItem(File directory)
+        public override ExplorerComponent Next()
         {
-            Console.WriteLine("\t" + directory.GetInfo());
+            if (_directoryIterator != null)
+            {
+                if (!_directoryIterator.IsDone())
+                {
+                    return _directoryIterator.Next();
+                }
+                else
+                {
+                    _directoryIterator = null;
+                }
+            }
+
+            _current = _currentDirectory.Items.ElementAt(_indexes[_currentIndex]);                
+
+            if (_current is Directory)
+            {
+                _directoryIterator = (_current as Directory).GetIterator();
+            }
+
+            _currentIndex += 1;
+            return _current;           
+        }
+       
+        public override bool IsDone()
+        {
+            bool isDone = _directoryIterator != null ? _directoryIterator.IsDone() : true;          
+            return _currentIndex >= _indexes.Length && isDone;
         }
     }
+
+
 
 }
