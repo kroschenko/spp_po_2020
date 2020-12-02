@@ -1,0 +1,4 @@
+1 ford mustang 2012 red 40000 AA159951756 AB-1234 Not 0
+2 dodge chalanger 2017 blue 90000 AB98289189 AB-4592 Arnold_Andrey_Sergeevich 556987233
+3 audi a8 2008 black 30000 CA8269829922 AB-7763 Kushirin_Kirill_Ivanovich 689293992 4 tesla modelX 2018 white 2000000 AK836365515 AB-2569 Not 0
+5 bmw e46 2004 white 15000 AP269873515 AB-2379 Not 0
