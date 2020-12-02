@@ -1,32 +1,31 @@
 package com.company;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        String[][] string = Files.lines(Paths.get("/Users/daniil_kabacuk/Desktop/spp laba2/src/com/company/text"))
-                .map(line -> line.split("\\s")).toArray(String[][]::new);
-
-        for(int i = 0; i < string.length; i++) {
-            for(int j = 0; j < string[i].length; j++) {
-                if(isRepeated(string, i, j)) {
-                    System.out.println(string[i][j]);
-                }
-            }
-        }
+    public static void main(final String[] args) {
+        readTheFile("/Users/daniil_kabachuk/Desktop/3 курс/SPP/spp laba2/src/com/company/text");
     }
 
-    public static Boolean isRepeated(String[][] string, int elem1, int elem2) {
-        for(int i = elem1; i < string.length; i++) {
-            for(int j = elem2 + 1; j < string[i].length; j++) {
-                if(string[elem1][elem2].equals(string[i][j])) {
-                    return false;
-                }
-            }
+    private static void readTheFile(String path) {
+        try (Stream<String> stream = Files.lines(Paths.get(path))) {
+            List<String> inputData = stream.map((line) -> line
+                    .replace(",", "")
+                    .replace(".", "")
+                    .split(" "))
+                    .flatMap(Arrays::stream)
+                    .collect(Collectors.toList());
+            Collections.sort(inputData);
+            Set<String> setOfDistinctData = new LinkedHashSet<String>();
+            setOfDistinctData.addAll(inputData);
+            System.out.println(setOfDistinctData.toString());
+        } catch (Exception exception) {
+            System.out.println("Exception: " + exception.getMessage());
         }
-        return true;
     }
 }

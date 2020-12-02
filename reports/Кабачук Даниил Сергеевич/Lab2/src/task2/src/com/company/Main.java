@@ -25,7 +25,7 @@ public class Main {
             case 3:
                 try {
                     lines = Integer.parseInt(args[1]);
-                    String PATH = dir + "/" +args[2];
+                    String PATH = dir +"/" +args[2];
                     System.out.println(tailFile(new File(PATH), lines));
                 }catch (Exception ex){
                     ex.printStackTrace();
@@ -35,17 +35,18 @@ public class Main {
                 if(size < 2 || size > 3)
                     System.out.println("unknown option");
         }
-    }
 
+
+    }
     public static String tailFile(File file, int lines) {
         RandomAccessFile fileHandler = null;
         try {
-            fileHandler = new RandomAccessFile(file, "r" );
+            fileHandler = new RandomAccessFile( file, "r" );
             long fileLength = fileHandler.length() - 1;
             StringBuilder stringBuilder = new StringBuilder();
             int line = 0;
 
-            for(long filePointer = fileLength; filePointer != -1; filePointer--) {
+            for(long filePointer = fileLength; filePointer != -1; filePointer--){
                 fileHandler.seek( filePointer );
                 byte readByte = fileHandler.readByte();
 
