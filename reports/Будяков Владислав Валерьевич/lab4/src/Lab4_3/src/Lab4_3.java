@@ -1,7 +1,6 @@
 
 public class Lab4_3 
 {
-
 	public static void main(String[] args) 
 	{
 		hospital hosp = new hospital();
@@ -14,5 +13,4 @@ public class Lab4_3
 		hosp.leavePat("Vasya");
 		hosp.show();
 	}
-
 }
