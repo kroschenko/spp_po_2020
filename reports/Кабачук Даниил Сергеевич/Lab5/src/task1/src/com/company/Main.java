@@ -3,44 +3,45 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        VideoPlayer videoPlayer = new VideoPlayer(512,10,7);
-        videoPlayer.print();
+        LaserPrinter laserPrinter = new LaserPrinter(300,true,7);
+        laserPrinter.print();
     }
 
 }
 
-interface Equipment {
+interface PrintingDevice {
     void print();
-    int freeMemory();
+    int textLength();
 }
 
-abstract class Player implements Equipment {
-    int memory;
-    int records;
+class Printer implements PrintingDevice {
+    int maxTextLength;
+    boolean wifi;
 
-    Player(int memory, int records){
-        this.records = records;
-        this.memory = memory;
-    }
-
-    public abstract void print();
-    public abstract int freeMemory();
-}
-
-class VideoPlayer extends Player {
-    private int recordWeight;
-
-    VideoPlayer(int memory, int records, int recordWeight) {
-        super(memory, records);
-        this.recordWeight = recordWeight;
+    Printer(int maxTextLength, boolean wifi){
+        this.wifi = wifi;
+        this.maxTextLength = maxTextLength;
     }
 
     public void print() {
-        System.out.println("Память: " + memory + "мб \n" + "записи: " + records + "\nсвободная память: " + freeMemory() + "мб");
+        System.out.println("Максимальная длина строки: " + maxTextLength + " \n" + "Наличие wi-fi: " + wifi + "\nТекущая длина строки: " + textLength());
     }
 
-    public int freeMemory() {
-        return memory - records * recordWeight;
+    public int textLength() {
+        return 1;
+    }
+}
+
+class LaserPrinter extends Printer {
+    private int maxTextLength;
+
+    LaserPrinter(int maxTextLength, boolean wifi, int recordWeight) {
+        super(maxTextLength, wifi);
+        this.maxTextLength = maxTextLength;
+    }
+
+    public int textLength() {
+        return 10;
     }
 
 }
