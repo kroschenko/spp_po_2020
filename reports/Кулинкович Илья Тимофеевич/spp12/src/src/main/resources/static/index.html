@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align: center; padding-top: 20px">
+
+<div id="main-content" class="container">
+    <div id="startGame">
+        <form id="startGameForm" class="form" style="padding-top: 20px;">
+            <div>
+                <input id="userNameInForm" type="text" placeholder="Username" required>
+            </div>
+            <button style="margin-top: 20px;" id="newGame" type="submit">Host game</button>
+            <button id="connect" type="submit">Join existing</button>
+        </form>
+    </div>
+    <button id="disconnect" type="submit">Exit</button>
+    <div id="mainGame"></div>
+</div>
+
+<div class="modal fade" id="updateDialog" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <input id="modalChangedNumber" type="number">
+            <a href="#" data-dismiss="modal">Close</a>
+            <a href="#" id="updateFormUrl">Update</a>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/index.js" defer="defer"></script>
+
+</body>
+</html>
