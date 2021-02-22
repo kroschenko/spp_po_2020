@@ -1,0 +1,127 @@
+CREATE TABLE readers (
+        reader_id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+        name VARCHAR(100) NOT NULL,
+        surname VARCHAR(100) NOT NULL,
+        middle_name VARCHAR(100) NOT NULL,
+        reader_card VARCHAR(100) NOT NULL
+);
+CREATE FUNCTION insert_into_readers(VARCHAR(100), VARCHAR(100), VARCHAR(100), VARCHAR(100)) RETURNS VOID AS $$
+    INSERT INTO readers (name,surname,middle_name, reader_card) VALUES($1, $2, $3, $4);
+$$ LANGUAGE SQL;
+CREATE FUNCTION update_readers(INT, VARCHAR(100), VARCHAR(100), VARCHAR(100), VARCHAR(100)) RETURNS VOID AS $$
+    UPDATE readers SET name=$2, surname=$3, middle_name=$4, reader_card=$5 WHERE reader_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION delete_from_readers(INT) RETURNS VOID AS $$
+    DELETE FROM readers WHERE reader_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_all_from_readers() RETURNS SETOF readers AS $$
+    SELECT * FROM readers;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_id_from_readers(INT) RETURNS SETOF readers AS $$
+    SELECT * FROM readers WHERE reader_id=$1;
+$$ LANGUAGE SQL;
+
+CREATE TABLE library_cards (
+        library_card_id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+        date_of_issue DATE NOT NULL,
+        date_of_delivery DATE,
+        reader_id SMALLINT NOT NULL,
+        FOREIGN KEY (reader_id) REFERENCES readers(reader_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE FUNCTION insert_into_library_cards(DATE, DATE, INT) RETURNS VOID AS $$
+    INSERT INTO library_cards (date_of_issue,date_of_delivery, reader_id) VALUES($1, $2, $3);
+$$ LANGUAGE SQL;
+CREATE FUNCTION update_library_cards(INT, DATE, DATE) RETURNS VOID AS $$
+    UPDATE library_cards SET date_of_issue=$2, date_of_delivery=$3 WHERE library_card_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION delete_from_library_cards(INT) RETURNS VOID AS $$
+    DELETE from library_cards WHERE library_card_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_all_from_library_cards() RETURNS SETOF library_cards AS $$
+    SELECT * from library_cards;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_id_from_library_cards(INT) RETURNS SETOF library_cards AS $$
+    SELECT * from library_cards WHERE reader_id=$1;
+$$ LANGUAGE SQL;
+
+CREATE TABLE authors (
+        author_id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+        name VARCHAR(100) NOT NULL,
+        surname VARCHAR(100) NOT NULL,
+        middle_name VARCHAR(100) NOT NULL
+);
+CREATE FUNCTION insert_into_authors(VARCHAR(100), VARCHAR(100), VARCHAR(100)) RETURNS VOID AS $$
+    INSERT INTO authors (name,surname,middle_name) VALUES($1, $2, $3);
+$$ LANGUAGE SQL;
+CREATE FUNCTION update_authors(INT, VARCHAR(100), VARCHAR(100), VARCHAR(100)) RETURNS VOID AS $$
+    UPDATE authors SET name=$2, surname=$3, middle_name=$4 WHERE author_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION delete_from_authors(INT) RETURNS VOID AS $$
+    DELETE FROM authors WHERE author_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_all_from_authors() RETURNS SETOF authors AS $$
+    SELECT * FROM authors;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_id_from_authors(INT) RETURNS SETOF authors AS $$
+    SELECT * FROM authors WHERE author_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION get_author_id_from_authors(VARCHAR(100), VARCHAR(100), VARCHAR(100)) RETURNS INT AS $$
+    SELECT author_id FROM authors WHERE name=$1 AND surname=$2 AND middle_name=$3;
+$$ LANGUAGE SQL;
+
+CREATE TABLE books (
+        book_id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+        name VARCHAR(100) NOT NULL,
+        number_of_pages INT NOT NULL,
+        date_of_release INT NOT NULL
+);
+CREATE FUNCTION insert_into_books(VARCHAR(100), INT, INT) RETURNS VOID AS $$
+    INSERT INTO books (name,number_of_pages,date_of_release) VALUES($1, $2, $3);
+$$ LANGUAGE SQL;
+CREATE FUNCTION update_books(INT, VARCHAR(100), INT, INT) RETURNS VOID AS $$
+    UPDATE books SET name=$2, number_of_pages=$3, date_of_release=$4 WHERE book_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION delete_from_books(INT) RETURNS VOID AS $$
+    DELETE FROM books WHERE book_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_all_from_books() RETURNS SETOF books AS $$
+    SELECT * FROM books;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_id_from_books(INT) RETURNS SETOF books AS $$
+    SELECT * FROM books WHERE book_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION get_book_id_from_books(VARCHAR(100), INT, INT) RETURNS INT AS $$
+    SELECT book_id FROM books WHERE name=$1 AND number_of_pages=$2 AND date_of_release=$3;
+$$ LANGUAGE SQL;
+
+CREATE TABLE library_card_books (
+        book_id SMALLINT,
+        library_card_id SMALLINT,
+        FOREIGN KEY(book_id) REFERENCES books(book_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY(library_card_id) REFERENCES library_cards(library_card_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE FUNCTION insert_into_library_card_books(INT, INT) RETURNS VOID AS $$
+    INSERT INTO library_card_books (book_id,library_card_id) VALUES($1, $2);
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_book_id_from_card_books(INT) RETURNS SETOF library_card_books AS $$
+    SELECT * FROM library_card_books WHERE book_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_library_card_id_from_card_books(INT) RETURNS SETOF library_card_books AS $$
+    SELECT * FROM library_card_books WHERE library_card_id=$1;
+$$ LANGUAGE SQL;
+
+CREATE TABLE book_authors (
+        book_id INT,
+        author_id INT,
+        FOREIGN KEY(book_id) REFERENCES books(book_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY(author_id) REFERENCES authors(author_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE FUNCTION insert_into_book_authors(INT, INT) RETURNS VOID AS $$
+    INSERT INTO book_authors (book_id,author_id) VALUES($1, $2);
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_book_id_from_book_authors(INT) RETURNS SETOF book_authors AS $$
+    SELECT * FROM book_authors WHERE book_id=$1;
+$$ LANGUAGE SQL;
+CREATE FUNCTION select_by_author_id_from_book_authors(INT) RETURNS SETOF book_authors AS $$
+    SELECT * FROM book_authors WHERE author_id=$1;
+$$ LANGUAGE SQL;
