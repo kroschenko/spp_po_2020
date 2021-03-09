@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     double currentValue = 0;
-    double prevElement = 0;
+    double prevElement = 1;
     int currentIteration = 0;
     Text sum = new Text("");
     TextField inputCount = new TextField();
@@ -64,14 +64,14 @@ public class Main extends Application {
     }
 
     public double calculate() {
-        return  1.0 / factorial(currentIteration);
+        return prevElement * 1.0 / (currentIteration == 0 ? 1 : currentIteration);
     }
 
     public long factorial(int n) {
         if(n == 0 || n == 1) {
             return 1;
         }
-        return n <= 2? n : n * factorial(n - 1);
+        return n <= 2 ? n : n * factorial(n - 1);
     }
 
     public void startCalculate() {
@@ -82,12 +82,12 @@ public class Main extends Application {
 
                 for (int i = currentIteration; i < count; i++) {
                     try {
+                        this.currentIteration = i + 1;
+
                         currentValue = calculate();
-                        prevElement += currentValue;
+                        prevElement = currentValue;
 
-                        sum.setText(Double.toString(prevElement));
-
-                        currentIteration = i + 1;
+                        sum.setText(Double.toString(currentValue));
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -107,7 +107,7 @@ public class Main extends Application {
     public void stopCalculate() {
         backgroundThread.stop();
         this.currentValue = 0.0;
-        this.prevElement = 0.0;
+        this.prevElement = 1.0;
         this.currentIteration = 0;
         this.sum.setText("");
         inputCount.setText("");
