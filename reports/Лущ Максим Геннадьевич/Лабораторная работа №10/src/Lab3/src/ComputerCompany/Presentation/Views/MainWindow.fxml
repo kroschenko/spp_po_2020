@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="425.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComputerCompany.Presentation.Controllers.MainWindowController">
+   <children>
+      <TableView fx:id="employeeTable" layoutX="14.0" layoutY="23.0" onMouseClicked="#ClickItem" prefHeight="300.0" prefWidth="364.0">
+         <columns>
+            <TableColumn fx:id="employeeId" prefWidth="26.19998264312744" text="Id" />
+            <TableColumn fx:id="employeeFirstName" prefWidth="88.20001220703125" text="FirstName" />
+            <TableColumn fx:id="employeeLastName" prefWidth="69.19998168945312" text="LastName" />
+            <TableColumn fx:id="employeeAddress" prefWidth="66.5999755859375" text="Address" />
+            <TableColumn fx:id="employeeDepartment" prefWidth="108.79998779296875" text="Department" />
+         </columns></TableView>
+      <Label layoutX="14.0" layoutY="5.0" text="Employees" />
+      <ButtonBar layoutX="14.0" layoutY="331.0" prefHeight="38.0" prefWidth="364.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#OnCreateEmployeeButtonClicked" text="Create" ButtonBar.buttonData="LEFT" />
+            <Button mnemonicParsing="false" onAction="#OnEditEmployeeButtonClicked" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#OnDeleteEmployeeButtonClicked" text="Delete" />
+        </buttons>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ButtonBar>
+      <VBox alignment="TOP_CENTER" layoutX="395.0" layoutY="23.0" prefHeight="122.0" prefWidth="138.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OnCreateAddressButtonClicked" prefHeight="26.0" prefWidth="126.0" text="Create Address" textAlignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#OnCreateDepartmentButtonClicked" prefHeight="26.0" prefWidth="126.0" text="Create Department" />
+            <Button mnemonicParsing="false" onAction="#OnCreateTaskButtonClicked" prefHeight="26.0" prefWidth="126.0" text="Create Task" />
+          <Button mnemonicParsing="false" onAction="#OnAssignTaskButtonClicked" prefHeight="26.0" prefWidth="126.0" text="Assign Task" />
+            <Button mnemonicParsing="false" onAction="#OnRemoveTaskButtonClicked" prefWidth="126.0" text="Remove Task" />
+         </children>
+      </VBox>
+      <GridPane layoutX="395.0" layoutY="202.0" prefHeight="177.0" prefWidth="138.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="27.6" minHeight="10.600000000000001" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="54.6" minHeight="18.200000000000006" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="64.6" minHeight="21.799999999999997" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.60000000000001" minHeight="25.000000000000007" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.599999999999994" minHeight="16.599999999999994" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="63.80000000000001" minHeight="10.0" prefHeight="63.80000000000001" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Label text="First name:" />
+            <Label fx:id="firstName" GridPane.columnIndex="1" />
+            <Label text="Last name" GridPane.rowIndex="1" />
+            <Label fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Address:" GridPane.rowIndex="2" />
+            <Label fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Department:" GridPane.rowIndex="3" />
+            <Label text="Is work:" GridPane.rowIndex="4" />
+            <Label fx:id="department" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="isWork" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Tasks:" GridPane.rowIndex="5" />
+            <Label fx:id="tasks" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="372.0" prefHeight="38.0" prefWidth="364.0" spacing="10.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="110.0" text="Filter by last name:" />
+            <TextField fx:id="lastNameFilter" prefHeight="26.0" prefWidth="121.0" />
+            <Button fx:id="filter" mnemonicParsing="false" onAction="#OnFilterButtonClicked" prefHeight="26.0" prefWidth="64.0" text="Filter" />
+         </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
