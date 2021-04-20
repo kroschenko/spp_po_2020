@@ -50,6 +50,7 @@ $('#updateDialog').on('show.bs.modal', function (event) {
     $(this).find("#modalChangedNumber").val(target.data('number'))
     $("#updateFormUrl").attr("onclick", "updateNumber(" + target.data('id') + ", " +
         target.data('number') + ")")
+    $("#reduceNumbers").attr("onclick", "reduceGameNumber(" + target.data('id') + ")")
 })
 
 function disconnect() {
@@ -112,6 +113,7 @@ function gameIsOver(lastUserName) {
 function reduceGameNumber(index) {
     gameNumber = gameNumber.slice(0, index)
     sendName()
+    $('#updateDialog').modal('hide')
 }
 
 $(function () {
