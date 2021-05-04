@@ -1,37 +1,8 @@
 import java.util.*;
+
+
 public class hospital 
 {
-	private class doctor
-	{
-		String docName;
-		String patName;
-		@Override
-		public String toString()
-		{
-			return "Patient name: "+patName+"\nProcedure: "+"\nDoctor: "+docName+"\n";
-		}
-	}
-	
-	private class patient
-	{
-		String patName;
-		String docName;
-		String proc;
-		String condition;
-		int age;
-		
-		@Override
-		public String toString()
-		{
-			return "Patient name: "+patName+"\nProcedure: "+proc+"\nAge: "+age+"\nDoctor: "+docName+"\n"+"Condition: "+condition+"\n";
-		}
-		
-		public boolean equals(patient pat, String patName)
-		{
-			if (pat.patName == patName) return true;
-			else return false;
-		}
-	}
 	
 	public void addPatient(String patName, int age)
 	{
