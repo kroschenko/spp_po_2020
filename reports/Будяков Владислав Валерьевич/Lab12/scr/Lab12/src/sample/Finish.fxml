@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?> <?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?> <?import javafx.scene.control.*?> <?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="169.0" prefWidth="188.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.FinishController">
+    <children>
+        <Text fx:id="win_lbl" layoutX="75.0" layoutY="55.0" strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Text"> <font>
+            <Font size="20.0" /> </font>
+        </Text>
+        <Button fx:id="ok_btn" layoutX="77.0" layoutY="117.0" mnemonicParsing="false" text="Ok" />
+    </children>
+</AnchorPane>
