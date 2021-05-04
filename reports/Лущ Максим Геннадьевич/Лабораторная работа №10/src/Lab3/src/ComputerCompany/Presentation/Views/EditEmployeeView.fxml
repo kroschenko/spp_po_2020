@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="296.0" prefWidth="219.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComputerCompany.Presentation.Controllers.EditEmployeeController">
+   <children>
+       <VBox layoutX="10.0" layoutY="19.0" prefHeight="270.0" prefWidth="199.0" spacing="5.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+           <padding>
+               <Insets top="10.0" />
+           </padding>
+           <Label text="First name" />
+           <TextField fx:id="firstName" />
+           <Label text="Last name" />
+           <TextField fx:id="lastName" />
+           <Label text="Department" />
+         <ComboBox fx:id="department" prefWidth="150.0" />
+           <Label text="Address" />
+         <ComboBox fx:id="address" prefWidth="150.0" />
+         <CheckBox fx:id="isWork" mnemonicParsing="false" text="Is work" />
+           <Button mnemonicParsing="false" onAction="#OnCreateButtonClicked" text="Save" />
+       </VBox>
+      <Label layoutX="10.0" layoutY="5.0" text="Edit Employee">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
