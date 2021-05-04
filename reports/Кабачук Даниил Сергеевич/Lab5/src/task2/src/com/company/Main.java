@@ -3,103 +3,74 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Transporter transport[] = new Transporter[4];
-        transport[0] = new Car(5,120,10);
-        transport[1] = new Plane(false, 800, 100);
-        transport[2] = new Train (1000, 160, 7);
-        transport[3] = new Car (4, 100, 8);
-        System.out.println("Авто: ");
-        transport[0].discard(600, "Витебск");
-        System.out.println("Самолет: ");
-        transport[1].discard(500, "Могилев");
-        System.out.println("Поезд: ");
-        transport[2].discard(350, "Минск");
-        System.out.println("Авто: ");
-        transport[3].discard(100, "Брест");
+        Instrument instrument[] = new Instrument[3];
+        instrument[0] = new Wind(5,120,10);
+        instrument[1] = new Percussion(2, 800, 100);
+        instrument[2] = new Stringed (6, 160, 7);
+        System.out.println("Orchestra is: ");
+        instrument[0].play(3, 0.7);
+        instrument[1].play(5, 0.5);
+        instrument[2].play(10, 0.8);
     }
 }
 
-class Plane extends Transporter {
-    boolean wheather;
+class Percussion extends Instrument {
+    int size;
 
-    public Plane (boolean wheather, double speed, double price){
-        this.wheather = wheather;
-        this.speed = speed;
-        this.price = price;
+    public Percussion (int size, double weight, double typeNumber){
+        this.size = size;
+        this.weight = weight;
+        this.typeNumber = typeNumber;
     }
 
-    @Override void discard(double distance, String city){
-        if(!this.wheather){
-            check(distance, city);
-        } else {
-            System.out.println("Изза плохой погоды полеты отменены\n");
-        }
+    @Override void play(double time, double speed){
+        System.out.println("Percussion is playing " + time + "h with " + speed + " speed");
     }
 
-    void setWheather(){
-        this.wheather = true;
+    void setSize(){
+        this.size = 5;
     }
 }
 
-class Train extends Transporter {
-    double fuel;
+class Stringed extends Instrument {
+    int stringsNumber;
 
-    public Train (double fuel, double speed, double price){
-        this.fuel = fuel;
-        this.speed = speed;
-        this.price = price;
+    public Stringed (int stringsNumber, double weight, double typeNumber){
+        this.stringsNumber = stringsNumber;
+        this.weight = weight;
+        this.typeNumber = typeNumber;
     }
 
-    @Override void discard(double distance, String city){
-        if(this.fuel < 1000){
-            System.out.println("Недостаточно топлива.\n");
-        } else {
-            check(distance, city);
-        }
+    @Override void play(double time, double speed){
+        System.out.println("Stringed is playing " + time + "h with " + speed + " speed");
     }
 
-    void refuel(double fuel){
-        this.fuel += fuel;
+    void checkNumber(int stringsNumber){
+        this.stringsNumber += stringsNumber;
     }
 }
 
-abstract class Transporter {
-    double speed;
-    double price;
+abstract class Instrument {
+    double weight;
+    double typeNumber;
 
-    abstract void discard(double distance, String city);
-
-    void check (double distance, String city){
-        double time = distance/this.speed;
-        double money = time * this.price;
-
-        System.out.println(
-                "Пункт назначения: " + city +
-                "\n Расстояние: " + distance +
-                "\n Время: " + time +
-                "\n Цена: " + money + "\n"
-        );
-    }
+    abstract void play(double time, double speed);
 }
 
-class Car extends Transporter {
-    int passengers;
+class Wind extends Instrument {
+    int value;
 
-    public Car (int passengers, double speed, double price){
-        this.passengers = passengers;
-        this.speed = speed;
-        this.price = price;
+    public Wind (int value, double weight, double typeNumber){
+        this.value = value;
+        this.weight = weight;
+        this.typeNumber = typeNumber;
     }
 
-    @Override void discard(double distance, String city){
-        if(this.passengers > 5){
-            System.out.println("Слишком много пассажиров.\n");
-        } else {
-            check(distance, city);
-        }
+    @Override void play(double time, double speed){
+        System.out.println("Wind is playing " + time + "h with " + speed + " speed");
     }
 
-    void getOut(int passengers){
-        this.passengers -= passengers;
+    void getValue(int value){
+        this.value -= value;
     }
 }
