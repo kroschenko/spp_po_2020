@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2- internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdderController">  <children>
+    <ComboBox fx:id="comboBoxProducts" maxWidth="1.7976931348623157E308"  promptText="Выберите продукт или услугу">
+        <VBox.margin>
+            <Insets bottom="30.0" />
+        </VBox.margin>
+    </ComboBox>
+    <ComboBox fx:id="comboBoxClients" maxWidth="1.7976931348623157E308"  promptText="Выберите клиента">
+        <VBox.margin>
+            <Insets bottom="30.0" />
+        </VBox.margin>
+    </ComboBox>
+    <TextField fx:id="textAreaCount" maxWidth="1.7976931348623157E308"  promptText="Введите количество">
+        <VBox.margin>
+            <Insets bottom="30.0" />
+        </VBox.margin>
+    </TextField>
+    <Button fx:id="buttonAdd" maxWidth="1.7976931348623157E308" mnemonicParsing="false"  onAction="#addButtonClick" text="Добавить" />
+</children>
+</VBox>
